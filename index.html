@@ -10,10 +10,12 @@
     <div id="app">
         <div>
             <h1>Random  emails: </h1>
-            <button @click="generateEmail">Genera un email random</button>
-            <ul>
-                <li v-for="email in myEmails" >  {{ email }}</li>
-            </ul>
+            <button @click="generateEmail">Genera le tue dieci email random</button>
+       
+                <ul v-if="myEmails.length  >= 10">
+                     <li v-for="email in myEmails">  {{ email }} </li>
+                </ul>
+          
         </div>
    
    
